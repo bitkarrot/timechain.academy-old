@@ -10,7 +10,7 @@
       
       
       
-        <meta name="author" content="Randy McMillan & [timechain-academy/people](https://github.com/orgs/timechain-academy/people)">
+        <meta name="author" content="Randy McMillan & \ [timechain-academy/people](https://github.com/orgs/timechain-academy/people)">
       
       
         <link rel="canonical" href="http://localhost:8008/books/bitcoinbook/">
@@ -53,23 +53,22 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#mastering-bitcoin" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -108,6 +107,28 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
     
@@ -144,6 +165,30 @@
   </li>
 
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Books
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../COMMANDS/" class="md-tabs__link">
+      Commands
+    </a>
+  </li>
+
+      
     </ul>
   </div>
 </nav>
@@ -169,7 +214,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="TimeChain.Academy" class="md-nav__button md-logo" aria-label="TimeChain.Academy" data-md-component="logo">
       
@@ -210,6 +257,36 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Books
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COMMANDS/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -217,72 +294,15 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <p>Code Examples: <img alt="travis_ci" src="https://travis-ci.org/bitcoinbook/bitcoinbook.svg?branch=develop" /></p>
-<h1 id="mastering-bitcoin">Mastering Bitcoin</h1>
-<p>Mastering Bitcoin is a book for developers, although the first two chapters cover bitcoin at a level that is also approachable to non-programmers. Anyone with a basic understanding of technology can read the first two chapters to get a great understanding of bitcoin.</p>
-<p>This repository contains the complete <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print2">first edition, second print</a>, published in December 2014, and the complete <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print3_rc1">second edition, third print</a>, published in March 2018, as published by O'Reilly Media in paperback and ebook formats.</p>
-<h1 id="issues-errors-comments-contributions">Issues, Errors, Comments, Contributions</h1>
-<p>If you know how to make a pull request to contribute a fix, please write the correction and use a pull request to submit it for consideration against the <a href="https://github.com/bitcoinbook/bitcoinbook/tree/develop">develop branch</a>. If you are making several changes, please use a separate commit for each to make it easier to cherry-pick or resolve conflicts. Otherwise, please submit an issue, explaining the error or comment. If you would like to contribute extensive changes or new material, please coordinate with the author first; contact information can be found on his website: https://antonopoulos.com/</p>
-<h1 id="reading-this-book">Reading this book</h1>
-<p>To read this book, see <a href="book.asciidoc">book.asciidoc</a>. Click on each of the chapters to read in your browser. Other parties may choose to release PDFs of the book online.</p>
-<h2 id="chapters">Chapters</h2>
-<ul>
-<li>Chapter 1: <a href="ch01.asciidoc">Introduction</a></li>
-<li>Chapter 2: <a href="ch02.asciidoc">How Bitcoin Works</a></li>
-<li>Chapter 3: <a href="ch03.asciidoc">Bitcoin Core: The Reference Implementation</a></li>
-<li>Chapter 4: <a href="ch04.asciidoc">Keys, Addresses</a></li>
-<li>Chapter 5: <a href="ch05.asciidoc">Wallets</a></li>
-<li>Chapter 6: <a href="ch06.asciidoc">Transactions</a></li>
-<li>Chapter 7: <a href="ch07.asciidoc">Advanced Transactions and Scripting</a></li>
-<li>Chapter 8: <a href="ch08.asciidoc">The Bitcoin Network</a></li>
-<li>Chapter 9: <a href="ch09.asciidoc">The Blockchain</a></li>
-<li>Chapter 10: <a href="ch10.asciidoc">Mining and Consensus</a></li>
-<li>Chapter 11: <a href="ch11.asciidoc">Bitcoin Security</a></li>
-<li>Chapter 12: <a href="ch12.asciidoc">Blockchain Applications</a></li>
-</ul>
-<h1 id="published">Published</h1>
-<p>"Mastering Bitcoin (Second Edition, Second Print): Programming the Open Blockchain" is now available in paperback and ebook formats by many booksellers worldwide:</p>
-<ul>
-<li><a href="https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1491954388">Amazon</a></li>
-</ul>
-<p>Mastering Bitcoin (First Edition Second Print) is also published in Japanese, Korean, and Chinese (Simplified) by publishers in the respective countries.</p>
-<p>Mastering Bitcoin (Open Edition), based on the First Edition, has been translated by volunteers into more than a dozen languages. Translations are available for free under CC-BY-SA license at: https://bitcoinbook.info</p>
-<h1 id="source">Source</h1>
-<p>The book's source code, found in this repository, is kept synchronized with the print and ebook editions.</p>
-<h2 id="mastering-bitcoin-first-edition">Mastering Bitcoin - First Edition</h2>
-<p>The tags <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print1">Edition1Print1</a>, <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print2">Edition1Print2</a> correspond to the two existing prints of Mastering Bitcoin (First Edition) as published by O'Reilly Media.</p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering Bitcoin - First Edition</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://antonopoulos.com/" property="cc:attributionName" rel="cc:attributionURL">Andreas M. Antonopoulos LLC</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-<p>This "Free Culture" compliant license was approved by my publisher O'Reilly Media (http://oreilly.com), who understands the value of open source. O'Reilly Media is not just the world's best publisher of technical books, but is also a strong supporter of this open culture and the sharing of knowledge.</p>
-<p>Thank you O'Reilly Media!</p>
-<h2 id="mastering-bitcoin-second-edition">Mastering Bitcoin - Second Edition</h2>
-<p>The tags, <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print_1">second_edition_print_1</a> and  <a href="https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print2">second_edition_print2</a>, correspond to the first (June 8th, 2017) and second (July 20th, 2017) print of Mastering Bitcoin (Second Edition), as published by O'Reilly Media.</p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering Bitcoin - Second Edition</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://antonopoulos.com/" property="cc:attributionName" rel="cc:attributionURL">Andreas M. Antonopoulos LLC</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-<h1 id="translations">Translations</h1>
-<p>If you are interested in translating this book, please join our team of volunteers at: https://www.transifex.com/aantonop/mastering-bitcoin</p>
-<p>Free copies of "Mastering Bitcoin Open Edition," translated in many languages, can be downloaded from: https://bitcoinbook.info</p>
+                  <h1>Index</h1>
+                
+                
                 
               
               
@@ -329,7 +349,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.instant", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>

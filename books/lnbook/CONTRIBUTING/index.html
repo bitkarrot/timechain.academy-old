@@ -10,7 +10,7 @@
       
       
       
-        <meta name="author" content="Randy McMillan & [timechain-academy/people](https://github.com/orgs/timechain-academy/people)">
+        <meta name="author" content="Randy McMillan & \ [timechain-academy/people](https://github.com/orgs/timechain-academy/people)">
       
       
         <link rel="canonical" href="http://localhost:8008/books/lnbook/CONTRIBUTING/">
@@ -53,13 +53,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,28 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
     
@@ -144,6 +170,30 @@
   </li>
 
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Books
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../COMMANDS/" class="md-tabs__link">
+      Commands
+    </a>
+  </li>
+
+      
     </ul>
   </div>
 </nav>
@@ -169,7 +219,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="TimeChain.Academy" class="md-nav__button md-logo" aria-label="TimeChain.Academy" data-md-component="logo">
       
@@ -210,93 +262,42 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Books
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../COMMANDS/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#current-project-status" class="md-nav__link">
-    Current Project STATUS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing-with-a-pull-request" class="md-nav__link">
-    Contributing with a Pull Request
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license-and-attribution" class="md-nav__link">
-    License and attribution
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing-with-an-issue" class="md-nav__link">
-    Contributing with an issue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#heading-styles-anchors-and-references" class="md-nav__link">
-    Heading styles, anchors and references
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#line-endings" class="md-nav__link">
-    Line endings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spelling" class="md-nav__link">
-    Spelling
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thanks" class="md-nav__link">
-    Thanks
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
             
           
           <div class="md-content" data-md-component="content">
@@ -313,8 +314,8 @@
 <p>Instructions on how to contribute with Issues and Pull Requests will be added shortly. In the mean time, please "Watch" the repository.</p>
 <p>Before contributing with a Pull Request, please read the current <strong>PROJECT STATUS</strong>.</p>
 <h2 id="license-and-attribution">License and attribution</h2>
-<p>All contributions must be properly licensed and attributed. If you are contributing your own original work, then you are offering it under a CC-BY license (Creative Commons Attribution). <em>You are responsible for adding your own name or pseudonym in the Acknowledgments section in the <a href="../preface.asciidoc">Preface</a>, as attribution for your contribution.</em></p>
-<p>If you are sourcing a contribution from somewhere else, it must carry a compatible license. The book will initially be released under a CC-BY-NC-ND license which means that contributions must be licensed under open licenses such as MIT, CC0, CC-BY, etc. Contributions under a "share-alike" or GPL license are not compatible with the CC-BY-NC-ND license and therefore cannot be accepted. You need to indicate the original source and original license, by including an asciidoc markup comment above your contribution, like this:</p>
+<p>All contributions must be properly licensed and attributed. If you are contributing your own original work, then you are offering it under a CC-BY license (Creative Commons Attribution). <em>You are responsible for adding your own name or pseudonym in the Acknowledgments section in the <a href="../preface.html">Preface</a>, as attribution for your contribution.</em></p>
+<p>If you are sourcing a contribution from somewhere else, it must carry a compatible license. The book will initially be released under a CC-BY-NC-ND license which means that contributions must be licensed under open licenses such as MIT, CC0, CC-BY, etc. Contributions under a "share-alike" or GPL license are not compatible with the CC-BY-NC-ND license and therefore cannot be accepted. You need to indicate the original source and original license, by including an html markup comment above your contribution, like this:</p>
 <pre><code>////
 Source: https://...
 License: CC0
@@ -326,8 +327,8 @@ Added by: @aantonop
 <li>Login with your GitHub account or create one now</li>
 <li><a href="https://github.com/lnbook/lnbook#fork-destination-box">Fork</a> the <code>lnbook</code> repository. Work on your fork. In particular you can clone it to your local computer with <code>git clone https://github.com/ADD_YOUR_GIT_USER_NAME_HERE/lnbook.git</code></li>
 <li>Create a new branch on which to make your change, e.g. <code>git checkout -b my_code_contribution</code>, or make the change on the <code>develop</code> branch.</li>
-<li>Please do one pull request PER asciidoc file, to avoid large merges. Edit the asciidoc file where you want to make a change or create a new asciidoc file in the <code>contrib</code> directory if you're not sure where your contribution might fit.</li>
-<li>Edit <code>preface.asciidoc</code> and add your own name to the list of contributors under the Acknowledgment section. Use your name, or a GitHub username, or a pseudonym.</li>
+<li>Please do one pull request PER html file, to avoid large merges. Edit the html file where you want to make a change or create a new html file in the <code>contrib</code> directory if you're not sure where your contribution might fit.</li>
+<li>Edit <code>preface.html</code> and add your own name to the list of contributors under the Acknowledgment section. Use your name, or a GitHub username, or a pseudonym.</li>
 <li>Commit your change. Include a commit message describing the correction.</li>
 <li>Submit a pull request against the lnbook repository.</li>
 <li>We currently use one line per sentence to make reviewing of pull requests and diffs easier. Make sure to follow this style guide and <strong>turn off auto formatting</strong> of your editor.</li>
@@ -338,34 +339,14 @@ Added by: @aantonop
 <h2 id="heading-styles-anchors-and-references">Heading styles, anchors and references</h2>
 <p>Adjust heading style in each section as follows:</p>
 <ol>
-<li>Only the chapter/section should be level 2, everything else should be level 3 and below (level 1 is the book title itself). Each asciidoc file should start with a "==" heading.</li>
+<li>Only the chapter/section should be level 2, everything else should be level 3 and below (level 1 is the book title itself). Each html file should start with a "==" heading.</li>
 <li>Headings should be all lower case, except for first letter, proper nouns and acronyms. "An introduction to the Lightning Network", "Explaining the physics of fulgurites" etc.</li>
 <li>Acronyms are spelled out, capitalized, with the acronym in parentheses (e.g. "Hash Time-Locked Contract (HTLC)"). Once you have spelled out an acronym in one heading, we can keep it as an acronym only in subsequent headings.</li>
 <li>No period at the end of headings. Question mark if it is a question (generally avoid question headings, unless really appropriate)</li>
 <li>Should include a unique anchor all lower case, underscore separated, within double square brackets (e.g. [[intro_to_htlcs]]).</li>
 <li>Headings should be followed by a blank line.</li>
-<li>Heading should be followed by a paragraph of text, not a lower-level heading without any text. If you find one like this, add a TODO comment (line of 4 slashes "////", line with "TODO: add paragraph", line of 4 slashes)</li>
-<li>Often it seems useful to link to a webpage / url. Since the research community figured out that every year about 50% of all outstanding url's become invalid we encourage you to use the wayback machine / Web Archive at: http://web.archive.org and provide a link to a saved copy of the web page.</li>
+<li>Heading should be followed by a paragraph of text, not a lower-level heading without any text. If</li>
 </ol>
-<p>Complete Example:</p>
-<pre><code>[[intro_to_ln]]
-== Introduction to the Lightning Network
-
-This is the intro paragraph.
-
-[[htlcs_explained]]
-=== All about Hash Time-Locked Contracts (HTLCs)
-
-As we saw in &lt;&lt;intro_to_ln&gt;&gt;, the intro paragraph is superb!
-
-</code></pre>
-<h2 id="line-endings">Line endings</h2>
-<p>All submission should use Unix-like line endings: LF (not CR, not CR/LF). All the postprocessing is done on Unix-like systems. Incorrect line endings, or changes to line endings cause confusion for the diff tools and make the whole file look like it has changed.</p>
-<p>If you are unsure or your OS makes things difficult, consider using a developer's text editor such as Atom.</p>
-<h2 id="spelling">Spelling</h2>
-<p>US English spelling standards should be used for contributions to the text.</p>
-<h2 id="thanks">Thanks</h2>
-<p>We are very grateful for the support of the entire Lightning Network community. With your help, this will be a great book that can help thousands of developers get started and eventually "master" LN. Thank you!</p>
                 
               
               
@@ -412,7 +393,7 @@ As we saw in &lt;&lt;intro_to_ln&gt;&gt;, the intro paragraph is superb!
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.instant", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
