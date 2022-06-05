@@ -28,7 +28,7 @@ RUN mkdir -p /root/docs
 
 # Expose MkDocs development server port
 EXPOSE 18000
-
+ENV PRIVATE=${PRIVATE}
 # Start development server by default
 ENTRYPOINT ["mkdocs"]
 CMD [ "-v", "serve", "-a", "0.0.0.0:18000", "-t", "material" ]

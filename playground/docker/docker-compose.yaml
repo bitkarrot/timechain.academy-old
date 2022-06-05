@@ -1,0 +1,85 @@
+version: '3.4'
+networks: {}
+services:
+  bitcoind:
+    build:
+      context: ./bitcoin-signet
+      dockerfile: Dockerfile
+      args:
+      - TRIPLET=x86_64-linux-gnu
+    links:
+    - tor
+    depends_on:
+    - tor
+    restart: unless-stopped
+    container_name: playground-bitcoind
+    environment:
+      TRIPLET: x86_64-linux-gnu
+      GET_COINS_ON_STARTUP: 'true'
+    expose:
+    - '38332'
+    - '38333'
+    - '38334'
+    ports:
+    - 38333:38333
+    volumes:
+    - type: bind
+      source: /Users/git/timechain.academy/sources/playground/docker/volumes/bitcoin_datadir
+      target: /root/.bitcoin/
+  lnd:
+    links:
+    - bitcoind
+    - tor
+    depends_on:
+    - bitcoind
+    - tor
+    environment:
+      TRIPLET: x86_64-linux-gnu
+      LND_ALIAS: NewNode
+      LND_LISTEN: playground-lnd:9735
+      LND_RPCLISTEN: playground-lnd:10009
+      LND_RESTLISTEN: playground-lnd:8080
+      zmqpubrawblock: tcp://playground-bitcoind:28332
+      zmqpubrawtx: tcp://playground-bitcoind:28333
+      torsocks: playground-tor:9050
+      torcontrol: playground-tor:9051
+      tlsextradomain: playground-lnd
+      rpchost: playground-bitcoind
+    restart: unless-stopped
+    container_name: playground-lnd
+    build:
+      context: ./lnd-signet
+      dockerfile: Dockerfile
+    expose:
+    - '8080'
+    - '9735'
+    - '9911'
+    - '10009'
+    ports:
+    - 8080:8080
+    - 9735:9735
+    - 9911:9911
+    - 10009:10009
+    volumes:
+    - type: bind
+      source: /Users/git/timechain.academy/sources/playground/docker/volumes/lnd_datadir
+      target: /root/.lnd/
+  tor:
+    restart: unless-stopped
+    container_name: playground-tor
+    build:
+      context: ./tor
+      dockerfile: Dockerfile
+    expose:
+    - 9050
+    - 9051
+    volumes:
+    - type: bind
+      source: /Users/git/timechain.academy/sources/playground/docker/volumes/tor_datadir
+      target: /home/tor/.tor
+    - type: bind
+      source: /Users/git/timechain.academy/sources/playground/docker/volumes/tor_torrcdir
+      target: /usr/local/etc/tor
+    - type: bind
+      source: /Users/git/timechain.academy/sources/playground/docker/volumes/tor_servicesdir
+      target: /var/lib/tor/hidden_services

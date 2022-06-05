@@ -70,11 +70,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#make-command" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -176,7 +171,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../books" class="md-tabs__link">
+    <a href="../../../private" class="md-tabs__link">
       Books
     </a>
   </li>
@@ -270,7 +265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books" class="md-nav__link">
+      <a href="../../../private" class="md-nav__link">
         Books
       </a>
     </li>
@@ -307,23 +302,23 @@
                 
                   <h1>MAKE</h1>
                 
-                <h2 id="make-command">MAKE COMMAND</h2>
-<p>make[1]: Entering directory '/root/plebnet-playground-docker'</p>
-<pre><code>[USAGE]: make [COMMAND] [EXTRA_ARGUMENTS]
+                <pre><code>make [COMMAND] [EXTRA_ARGUMENTS]    
 
-
-     make 
+make 
+     make all                        install and run playground and cluster
      make help                       print help
      make report                     print environment variables
-     make initialize                 install dependencies
+     make initialize                 install dependencies - ubuntu/macOS
      make init                       initialize basic dependencies
      make build
      make build para=true            parallelized build
      make install
+     make install-cluster
+                                     services=bitcoind,lnd,lndg,rtl,thunderhub,docs,tor,dashboard,notebook
      make run
                                      nocache=true verbose=true
 
-[DEV ENVIRONMENT]:
+    [DEV ENVIRONMENT]:  
 
      make signin profile=gh-user     ~/GH_TOKEN.txt required from github.com
      make build
@@ -333,13 +328,13 @@
      make install-python39-sh
 
 
-[EXAMPLES]:
+    [EXAMPLES]:
 
     make run nocache=true verbose=true
 
     make init &amp;&amp; play help
+
 </code></pre>
-<p>make[1]: Leaving directory '/root/plebnet-playground-docker'</p>
                 
               
               

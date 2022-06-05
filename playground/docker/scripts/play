@@ -19,6 +19,11 @@ export LND_ID
 LND_IMAGE=$(echo $(docker images | awk '/docker_lnd/'|awk ' {print $3}' | awk 'NR==1'))
 export LND_IMAGE
 
+CLN_ID=$(echo $(docker ps | awk '/docker_cln/'|awk ' {print $1}' | awk 'NR==1'))
+export CLN_ID
+CLN_IMAGE=$(echo $(docker images | awk '/docker_cln/'|awk ' {print $3}' | awk 'NR==1'))
+export CLN_IMAGE
+
 LNDG_ID=$(echo $(docker ps | awk '/cryptosharks131/'|awk ' {print $1}' | awk 'NR==1'))
 export LNDG_ID
 LNDG_IMAGE=$(echo $(docker images | awk '/cryptosharks131/'|awk ' {print $3}' | awk 'NR==1'))
@@ -67,6 +72,7 @@ export BTCD_IMAGE
         echo "THUNDERHUB_ID:            $THUNDERHUB_ID"
         echo "RTL_ID:                   $RTL_ID"
         echo "LND_ID:                   $LND_ID"
+        echo "CLN_ID:                   $CLN_ID"
         echo "LNDG_ID:                  $LNDG_ID"
         echo "DOCS_ID:                  $DOCS_ID"
         echo "BITCOIND_ID:              $BITCOIND_ID"
@@ -81,6 +87,7 @@ export BTCD_IMAGE
         echo "THUNDERHUB_IMAGE:          $THUNDERHUB_IMAGE"
         echo "RTL_IMAGE:                 $RTL_IMAGE"
         echo "LND_IMAGE:                 $LND_IMAGE"
+        echo "CLN_IMAGE:                 $CLN_IMAGE"
         echo "LNDG_IMAGE:                $LNDG_IMAGE"
         echo "DOCS_IMAGE:                $DOCS_IMAGE"
         echo "BITCOIND_IMAGES:           $BITCOIND_IMAGE"
@@ -137,44 +144,29 @@ export BTCD_IMAGE
 
     elif [[ ${!i} == *help ]]; then
         ((i++))
+        echo "play ids"
+        echo "play images"
+        echo "play tor-iftop"
         echo
-        echo "	play                     ids"
-        echo "	play                     top"
-        echo "	play                     shell"
-        echo "	play                     start"
-        echo "	play                     stop"
-        echo "	play                     iftop"
-        echo "	play                     ifconfig"
-        echo "	play                     newaddress"
-        echo "	play                     total-balance"
-        echo "	play                     confirmed-balance"
-        echo "	play                     unconfirmed-balance"
-        echo "	play                     lncli -n signet walletbalance"
+        echo "Examples:"
         echo
-        echo "	play                     tor-iftop"
+        echo "play-bitcoin"
+        echo "play bitcoin"
+        echo "play bitcoin id"
         echo
-        echo "	Examples:"
+        echo "play-lnd"
+        echo "play lnd"
+        echo "play lnd id"
         echo
-        echo "	play bitcoin id"
-        echo "	play bitcoin iftop"
-        echo "	play bitcoin netinfo 5"
-        echo "	play bitcoin gettxoutsetinfo"
-        echo "	play bitcoin getmininginfo"
+        echo "https://www.plebnet.fun"
         echo
-        echo "	play bitcoin '<COMMAND>'"
-        echo "	play bitcoin 'bitcoin-cli getblockhash 1000'"
-        echo "	play bitcoin 'bitcoin-cli getblock \$(bitcoin-cli getblockhash 0)'"
+        echo "Fund playground_lnd wallet with signet coins"
+        echo "play-getcoins -a \$(play-lnd getnewaddress)"
         echo
-        echo "	play lnd"
-        echo "	play lnd id"
-        echo "	play lnd top"
-        echo "	play lnd info"
-        echo "	play lnd ifconfig"
-        echo "	play lnd newaddress"
-        echo "	play lnd total-balance"
-        echo "	play lnd '<COMMAND>'"
+        echo "Nested Commands:"
+        echo "play-getcoins -a \$(play-lnd getnewaddress) && play-getcoins -a \$(play-lnd getnewaddress)"
+        echo "play-getcoins -a \$(play-getcoins -r true)"
         echo
-        echo "	play-lnd balance"
         exit
 
     elif [[ ${!i} == *shell ]]; then

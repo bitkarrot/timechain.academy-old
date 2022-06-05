@@ -176,7 +176,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../books" class="md-tabs__link">
+    <a href="../../private" class="md-tabs__link">
       Books
     </a>
   </li>
@@ -270,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../books" class="md-nav__link">
+      <a href="../../private" class="md-nav__link">
         Books
       </a>
     </li>
@@ -330,10 +330,16 @@
 <hr />
 <h3 id="clone-repo-install-requirements">Clone Repo &amp; Install Requirements</h3>
 <hr />
+<p>If you already have <em>virtualenv</em> installed, great. If not, and you are new to using Python, see this article about why its recommended to use a
+<a href="https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/">virtualenv</a></p>
 <pre><code>git clone https://github.com/PLEBNET-PLAYGROUND/plebnet-playground-docker --config core.autocrlf=input
 cd plebnet-playground-docker
+pip3 install virtualenv 
+python3 -m venv venv 
+source venv/bin/activate
 pip3 install -r requirements.txt
 </code></pre>
+<p>Follow <a href="https://docs.docker.com/compose/install/#install-compose">these instructions</a> to install the <code>docker compose</code> subcommand on your system (Mac, Windows, Windows Server 2016, or Linux systems). </p>
 <h3 id="supported-system-architectures">Supported System Architectures</h3>
 <table>
 <thead>
@@ -375,6 +381,10 @@ pip3 install -r requirements.txt
 <td>Lightning Labs LND Daemon</td>
 </tr>
 <tr>
+<td>clightning</td>
+<td>Blockstream lightningd Daemon</td>
+</tr>
+<tr>
 <td>tor</td>
 <td>tor network daemon</td>
 </tr>
@@ -404,12 +414,12 @@ pip3 install -r requirements.txt
 </tr>
 </tbody>
 </table>
-<h3 id="install-and-start-all-services-intel-x64-example">Install and start all services (Intel x64 example)</h3>
+<h3 id="install-and-start-all-services-will-autodetect-platform">Install and start all services (will autodetect platform)</h3>
 <hr />
-<pre><code class="language-sh">TRIPLET=x86_64-linux-gnu ./install.sh   
+<pre><code class="language-sh">./install.sh   
 </code></pre>
 <h3 id="install-and-start-just-the-bitcoindlnd-services-comma-separate-them">Install and start just the <code>bitcoind</code>,<code>lnd</code> services (comma separate them)</h3>
-<pre><code class="language-sh">TRIPLET=x86_64-linux-gnu services=bitcoind,lnd ./install.sh   
+<pre><code class="language-sh">services=bitcoind,lnd ./install.sh   
 </code></pre>
 <h3 id="start-containers">Start containers</h3>
 <hr />
@@ -443,7 +453,11 @@ open /Applications/Docker.app
 <h2 id="play-command"><a href="PLAY/">Play</a> Command</h2>
 <pre><code>make
 make init
-make install &amp;&amp; play help
+make install (non-destructive)
+make install reset=true (destructive)
+play help
+play-bitcoin help
+play-lnd help
 </code></pre>
 <hr />
 <h2 id="aliases">Aliases</h2>
@@ -453,9 +467,15 @@ alias change-password-playground='docker exec -it playground-lnd lncli --macaroo
 
 alias connect-playground='docker exec -it playground-lnd lncli --macaroonpath /root/.lnd/data/chain/bitcoin/signet/admin.macaroon connect 03ee9d906caa8e8e66fe97d7a76c2bd9806813b0b0f1cee8b9d03904b538f53c4e@104.131.10.218:9735'
 
+alias lightning-cli='docker exec -it playground-cln lightning-cli'
+
+alias connect-playground-cln='docker exec -it playground-cln lightning-cli connect 03ee9d906caa8e8e66fe97d7a76c2bd9806813b0b0f1cee8b9d03904b538f53c4e@104.131.10.218:9735'
+
 alias logs-bitcoind='docker logs playground-bitcoind'
 
 alias logs-lnd='docker logs playground-lnd'
+
+alias logs-cln='docker logs playground-cln'
 
 alias logs-tor='docker logs playground-tor'
 
@@ -466,6 +486,8 @@ alias logs-thub='docker logs playground-thub'
 alias restart-bitcoind='docker restart playground-bitcoind'
 
 alias restart-lnd='docker restart playground-lnd'
+
+alias restart-cln='docker restart playground-cln'
 
 alias restart-tor='docker restart playground-tor'
 

@@ -2,82 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://localhost:8008/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/COMMANDS/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/FOOTER/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/HEADER/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/TimeChain.Academy/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/books/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/books/private/</loc>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/git/</loc>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/git/hooks/</loc>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/gnupg/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/lnbits/</loc>
-         <lastmod>2022-05-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://localhost:8008/lnbits/lnbits/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/playground/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/playground/docker/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/playground/docker/MAKE/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/playground/docker/PLAY-BITCOIN/</loc>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/playground/docker/PLAY-LND/</loc>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/playground/docker/PLAY/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://localhost:8008/playground/docker/scripts/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <loc>http://localhost:8008/playground/docker/cluster/</loc>
+         <lastmod>2022-06-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://localhost:8008/private/</loc>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://localhost:8008/qt/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://localhost:8008/template/template/</loc>
-         <lastmod>2022-05-31</lastmod>
+         <loc>http://localhost:8008/template/</loc>
+         <lastmod>2022-06-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
